@@ -1,0 +1,87 @@
+.call-distribution {
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #fafafa;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.call-distribution h3 {
+  margin-top: 0;
+  color: #007bff;
+}
+
+.error {
+  color: #dc3545;
+  margin-bottom: 10px;
+}
+
+.distribution-form {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+.distribution-form input {
+  flex: 1;
+  min-width: 150px;
+  padding: 6px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.distribution-form button {
+  padding: 6px 12px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.distribution-form button:hover {
+  background-color: #218838;
+}
+
+.rules-list table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.rules-list th,
+.rules-list td {
+  padding: 8px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.rules-list th {
+  background-color: #f1f1f1;
+}
+
+.rules-list button {
+  margin-right: 5px;
+  padding: 4px 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.rules-list button:first-child {
+  background-color: #ffc107;
+  color: #fff;
+}
+
+.rules-list button:first-child:hover {
+  background-color: #e0a800;
+}
+
+.rules-list button:last-child {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.rules-list button:last-child:hover {
+  background-color: #c82333;
+}

@@ -1,0 +1,62 @@
+/* client/src/components/AudioFileGeneration.css */
+.audio-file-gen {
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #fafafa;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.audio-file-gen h3 {
+  margin-top: 0;
+  color: #007bff;
+}
+
+.upload-section {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.upload-section input {
+  flex: 1;
+}
+
+.upload-section button {
+  padding: 6px 12px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.upload-section button:hover {
+  background-color: #218838;
+}
+
+.file-list h4 {
+  margin-bottom: 10px;
+}
+
+.file-list ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.file-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.file-item span {
+  flex: 1;
+}
+
+.error {
+  color: #dc3545;
+  margin-bottom: 10px;
+}

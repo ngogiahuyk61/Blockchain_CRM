@@ -1,0 +1,74 @@
+/* client/src/components/MainLayout.css */
+
+.main-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Header */
+.header {
+  background: #007bff;
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+  flex: 0 0 auto;
+}
+
+/* Body */
+.layout-body {
+  display: flex;
+  flex: 1 1 auto;
+  overflow: hidden;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  background: #343a40;
+  color: #fff;
+  padding: 20px;
+  overflow-y: auto;
+  flex: 0 0 auto;
+}
+
+.sidebar h2 {
+  margin-top: 0;
+  font-size: 1.2em;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.sidebar li {
+  margin: 10px 0;
+}
+
+.sidebar a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.sidebar a:hover {
+  text-decoration: underline;
+}
+
+/* Content */
+.content {
+  flex: 1 1 auto;
+  padding: 20px;
+  background: #f4f6f8;
+  overflow-y: auto;
+}
+
+/* Footer */
+.footer {
+  background: #e9ecef;
+  padding: 10px;
+  text-align: center;
+  flex: 0 0 auto;
+  font-size: 0.9em;
+  color: #666;
+}

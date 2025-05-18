@@ -1,0 +1,95 @@
+/* client/src/components/CustomerManagement.css */
+.customer-mgmt {
+  padding: 15px;
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.customer-mgmt h3 {
+  margin-top: 0;
+  color: #007bff;
+}
+
+.msg {
+  margin: 10px 0;
+  padding: 8px;
+  border-radius: 4px;
+  background: #f8f9fa;
+  color: #333;
+}
+
+.cust-form {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+.cust-form input {
+  flex: 1;
+  min-width: 140px;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.cust-form button {
+  padding: 6px 12px;
+  background: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cust-form .cancel {
+  background: #6c757d;
+}
+
+.cust-form button:hover {
+  opacity: 0.9;
+}
+
+.cust-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.cust-table th,
+.cust-table td {
+  padding: 8px;
+  border: 1px solid #eee;
+  text-align: left;
+}
+
+.cust-table th {
+  background: #f1f1f1;
+}
+
+.cust-table tr {
+  cursor: pointer;
+}
+
+.cust-table tr:hover {
+  background: #f9f9f9;
+}
+
+.cust-table button {
+  margin-right: 5px;
+  padding: 4px 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cust-table button:first-child {
+  background: #ffc107;
+  color: #fff;
+}
+
+.cust-table button:last-child {
+  background: #dc3545;
+  color: #fff;
+}

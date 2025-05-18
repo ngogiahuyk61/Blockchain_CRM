@@ -1,64 +1,82 @@
-
 // app.js
-const express = require('express');
-const http = require('http');
-const mongoose = require('mongoose');
-require('dotenv').config();
+const express = require("express");
+const http = require("http");
+const mongoose = require("mongoose");
+const { Server } = require("socket.io");
+require("dotenv").config();
 
 const app = express();
 const server = http.createServer(app);
 
-// Mount API routes như trước
+// Middleware
 app.use(express.json());
-const contactRoutes = require('./routes/contactRoutes');
-const ticketRoutes  = require('./routes/ticketRoutes');
-app.use('/api/contacts', contactRoutes);
-app.use('/api/tickets',  ticketRoutes);
 
-// Kết nối MongoDB
-mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => console.log('Kết nối MongoDB thành công'))
-  .catch((err) => console.error('Kết nối MongoDB thất bại:', err));
+// Import Routes
+const contactRoutes = require("./routes/customerRoutes");
+const ticketRoutes = require("./routes/ticketRoutes");
+const callRecordingRoutes = require("./routes/callRecordingRoutes");
+const callRoutingRoutes = require("./routes/callRoutingRoutes");
+const ivrRoutes = require("./routes/ivrRoutes");
+const musicOnHoldRoutes = require("./routes/musicOnHoldRoutes");
+const numberRoutes = require("./routes/numberRoutes");
+
+// API Routes
+app.use("/api/contacts", contactRoutes);
+app.use("/api/tickets", ticketRoutes);
+app.use("/api/callrecordings", callRecordingRoutes);
+app.use("/api/callrouting", callRoutingRoutes);
+app.use("/api/ivr", ivrRoutes);
+app.use("/api/musiconhold", musicOnHoldRoutes);
+app.use("/api/numbers", numberRoutes);
+
+// MongoDB Connection
+mongoose
+  .connect(process.env.MONGODB_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => console.log("✅ Kết nối MongoDB thành công"))
+  .catch((err) => console.error("❌ Kết nối MongoDB thất bại:", err));
 
 // Thiết lập Socket.io
-const { Server } = require('socket.io');
 const io = new Server(server, {
-  cors: { origin: '*' }
+  cors: {
+    origin: "http://localhost:3000",
+    methods: ["GET", "POST"],
+  },
 });
 
-const Ticket = require('./models/ticketModel');
+io.on("connection", (socket) => {
+  console.log(`✅ User connected: ${socket.id}`);
 
-io.on('connection', socket => {
-  console.log(`Client ${socket.id} kết nối`);
+  socket.on("send_message", (data) => {
+    console.log("📨 Message received:", data);
+    io.emit("receive_message", data);
+  });
 
-  // Lắng nghe sự kiện chatEnd
-  socket.on('chatEnd', async data => {
-    // data = { contactId, initiator, transcript }
+  socket.on("chatEnd", async (data) => {
     try {
       const { contactId, initiator, transcript } = data;
 
-      // Tạo ticket tự động
       const ticket = await Ticket.create({
         contact: contactId,
         subject: `Chat kết thúc bởi ${initiator}`,
-        description: `Transcript:\n${transcript}`
+        description: `Transcript:\n${transcript}`,
       });
 
-      // Gửi lại ticket info cho client nếu cần
-      socket.emit('ticketCreated', ticket);
-      console.log(`Tạo ticket ${ticket._id} từ chatEnd`);
+      socket.emit("ticketCreated", ticket);
     } catch (err) {
-      console.error('Lỗi khi tạo ticket từ chatEnd:', err);
-      socket.emit('error', { message: err.message });
+      console.error("❌ Lỗi khi tạo ticket từ chatEnd:", err.message);
+      socket.emit("error", { message: err.message });
     }
   });
 
-  socket.on('disconnect', () => {
-    console.log(`Client ${socket.id} ngắt kết nối`);
+  socket.on("disconnect", () => {
+    console.log(`❌ User disconnected: ${socket.id}`);
   });
 });
 
-// Khởi động server qua HTTP server
+// Server Listener
 const PORT = process.env.PORT || 3000;
 server.listen(PORT, () => {
   console.log(`🚀 Server và Socket.io chạy trên cổng ${PORT}`);

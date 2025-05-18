@@ -1,0 +1,94 @@
+.ivr-management {
+  margin-bottom: 20px;
+  padding: 15px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.ivr-management h3 {
+  margin-top: 0;
+  color: #007bff;
+}
+
+.error {
+  color: #dc3545;
+  margin-bottom: 10px;
+}
+
+.ivr-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.ivr-form input,
+.ivr-form textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.ivr-form textarea {
+  height: 80px;
+  resize: vertical;
+}
+
+.ivr-form button {
+  align-self: flex-start;
+  padding: 6px 12px;
+  background: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.ivr-form .cancel-btn {
+  background: #6c757d;
+  margin-left: 10px;
+}
+
+.ivr-form button:hover {
+  opacity: 0.9;
+}
+
+.ivr-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.ivr-table th,
+.ivr-table td {
+  padding: 8px;
+  border: 1px solid #eee;
+  text-align: left;
+}
+
+.ivr-table th {
+  background: #f1f1f1;
+}
+
+.ivr-table button {
+  margin-right: 5px;
+  padding: 4px 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.ivr-table button:first-child {
+  background: #ffc107;
+  color: #fff;
+}
+
+.ivr-table button:last-child {
+  background: #dc3545;
+  color: #fff;
+}
+
+.ivr-table button:hover {
+  opacity: 0.9;
+}
