@@ -1,0 +1,118 @@
+.ivr-auto-reply {
+  margin-bottom: 20px;
+  padding: 15px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.ivr-auto-reply h3 {
+  margin-top: 0;
+  color: #007bff;
+}
+
+.error {
+  color: #dc3545;
+  margin-bottom: 10px;
+}
+
+.ivr-form {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+.ivr-form input {
+  flex: 1;
+  min-width: 100px;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.ivr-form button {
+  padding: 6px 12px;
+  background: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.ivr-form .cancel-btn {
+  background: #6c757d;
+}
+
+.ivr-form button:hover {
+  opacity: 0.9;
+}
+
+.ivr-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 15px;
+}
+
+.ivr-table th,
+.ivr-table td {
+  padding: 8px;
+  border: 1px solid #eee;
+  text-align: left;
+}
+
+.ivr-table th {
+  background: #f1f1f1;
+}
+
+.ivr-table button {
+  margin-right: 5px;
+  padding: 4px 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.ivr-table button:first-child {
+  background: #ffc107;
+  color: #fff;
+}
+
+.ivr-table button:last-child {
+  background: #dc3545;
+  color: #fff;
+}
+
+.ivr-table button:hover {
+  opacity: 0.9;
+}
+
+.ivr-preview {
+  margin-top: 10px;
+}
+
+.ivr-preview input {
+  padding: 6px;
+  width: 150px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.ivr-preview button {
+  margin-left: 10px;
+  padding: 6px 12px;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.ivr-preview button:hover {
+  opacity: 0.9;
+}
+
+.preview-msg {
+  margin-top: 10px;
+  font-style: italic;
+}

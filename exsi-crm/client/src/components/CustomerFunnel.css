@@ -1,0 +1,46 @@
+.customer-funnel {
+  margin-bottom: 20px;
+  padding: 15px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.customer-funnel h3 {
+  margin-top: 0;
+  color: #007bff;
+}
+
+.error {
+  color: #dc3545;
+  margin-bottom: 10px;
+}
+
+.funnel-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.funnel-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 12px;
+  border-bottom: 1px solid #eee;
+}
+
+.funnel-item:last-child {
+  border-bottom: none;
+}
+
+.stage-name {
+  font-weight: bold;
+}
+
+.stage-count {
+  background: #28a745;
+  color: #fff;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.9em;
+}

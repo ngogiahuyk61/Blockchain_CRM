@@ -1,0 +1,72 @@
+/* client/src/components/MusicOnHold.css */
+
+.music-on-hold {
+  margin-bottom: 20px;
+  padding: 15px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.music-on-hold h3 {
+  margin-top: 0;
+  color: #007bff;
+}
+
+.msg {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.upload-section {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.upload-section input {
+  flex: 1;
+}
+
+.upload-section button {
+  padding: 6px 12px;
+  background: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.upload-section button:hover {
+  opacity: 0.9;
+}
+
+.tracks-list ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.track-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.track-name {
+  flex: 1;
+}
+
+.track-item button {
+  padding: 4px 8px;
+  background: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.track-item button:hover {
+  opacity: 0.9;
+}

@@ -1,0 +1,63 @@
+.monitoring {
+  margin-bottom: 20px;
+  padding: 15px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.monitoring h3 {
+  margin-top: 0;
+  color: #007bff;
+}
+
+.error {
+  color: #dc3545;
+  margin-bottom: 10px;
+}
+
+.stats {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.stat-card {
+  flex: 1;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.stat-card .value {
+  font-size: 2em;
+  font-weight: bold;
+  color: #28a745;
+}
+
+.stat-card .label {
+  margin-top: 5px;
+  font-size: 0.9em;
+  color: #555;
+}
+
+.calls-list h4 {
+  margin-bottom: 10px;
+}
+
+.calls-list table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.calls-list th,
+.calls-list td {
+  padding: 8px;
+  border: 1px solid #eee;
+  text-align: left;
+}
+
+.calls-list th {
+  background: #f1f1f1;
+}
